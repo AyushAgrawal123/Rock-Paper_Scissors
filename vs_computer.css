@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(25, 25, 25);
+}
+
+body {
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.heading {
+    margin: 20px;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.container h1 img {
+    height: 40px;
+    width: auto;
+}
+
+.player {
+    margin: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.images {
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.rock1,
+.paper1,
+.scissor1,
+.rock2,
+.paper2,
+.scissor2 {
+    border-radius: 50px;
+    border: 4px solid white;
+    padding: 20px;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+}
+
+.player1 .images,
+.player2 .images {
+    margin: 20px;
+}
+
+#won {
+    margin-left: 60px;
+}
+
+button {
+    padding: 15px 50px;
+    background: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: background-color 0.2s;
+
+}
+
+button:hover {
+    background-color: #FF5252;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .images {
+        flex-wrap: wrap;
+    }
+
+    .choice {
+        margin: 5px;
+    }
+
+    button {
+        width: 80%;
+    }
+}

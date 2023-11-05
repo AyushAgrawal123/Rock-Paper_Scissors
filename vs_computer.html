@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper_Scissors</title>
+    <link rel="stylesheet" href="./vs_computer.css">
+    <link rel="icon" href="./images/rock-paper-scissors-icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">
+            Rock-Paper-Scissors <img src="./images/rock-paper-scissors-icon.png" alt="r-s-p_icon">
+        </h1>
+        <div class="player">
+            <h2>Your Move</h2>
+            <div class="images">
+                <div class="rock1"><img onclick="result('./images/rock-emoji.png')" src="./images/rock-emoji.png"
+                        alt="rock-emoji"></div>
+                <div class="paper1"><img onclick="result('./images/paper-emoji.png')" src="./images/paper-emoji.png"
+                        alt="paper-emoji"></div>
+                <div class="scissor1"><img onclick="result('./images/scissors-emoji.png')"
+                        src="./images/scissors-emoji.png" alt="scissors-emoji"></div>
+            </div>
+        </div>
+
+        <div class="choosen">
+            <h2>You Choosen : <img id="choosen1" src="./images/transparent.svg" alt=""></h2>
+            <br>
+            <h2>Computer Choosen : <img id="choosen2" src="./images/transparent.svg" alt=""></h2>
+        </div>
+        <br><br>
+        <div class="won-game">
+            <h1 id="won">Start Your Game <span> <img src="./images/transparent.svg" alt=""></span></h1>
+        </div>
+        <div class="reset-score">
+            <button onclick="reset()" id="reset"> Reset Default</button>
+        </div>
+    </div>
+
+    <script src="./vs_computer.js"></script>
+</body>
+
+</html>

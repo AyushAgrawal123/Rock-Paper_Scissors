@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Mode</title>
+    <link rel="icon" href="./images/rock-paper-scissors-icon.png" type="image/x-icon">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(25, 25, 25);
+            color: white;
+            text-align: center;
+        }
+
+        img {
+            width: 20px;
+            height: auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .mode-selection {
+            border: 2px solid #fff;
+            border-radius: 20px;
+            padding: 20px;
+            background-color: rgb(255, 255, 255, 0.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            max-width: 80%;
+        }
+
+        label {
+            display: block;
+            padding: 5px;
+
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #ff6b6b;
+            border: none;
+            border-radius: 5px;
+            margin-top: 5px;
+            color: #fff;
+            font-size: 1.2rem;
+            transition: background-color 0.2s;
+
+        }
+
+        button:hover {
+            background-color: #FF5252;
+        }
+
+        .heading {
+            margin: 20px;
+            font-size: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .mode-selection {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Rock-Paper-Scissors <img src="./images/rock-paper-scissors-icon.png" alt="r-s-p_icon"></h1>
+        <div class="mode-selection">
+            <h2>Select Game Mode</h2>
+            <form id="game-mode-form">
+                <label>
+                    <input type="radio" name="mode" value="vs-computer">
+                    Vs Computer
+                </label>
+                <label>
+                    <input type="radio" name="mode" value="two-player">
+                    Two Player
+                </label>
+                <button type="submit">Start Game</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const gameModeForm = document.getElementById("game-mode-form");
+
+            gameModeForm.addEventListener("submit", function (e) {
+                e.preventDefault(); // Prevent the form from submitting as a regular form
+
+                const selectedMode = document.querySelector('input[name="mode"]:checked').value;
+
+                // Redirect the user to the selected game mode
+                if (selectedMode === "vs-computer") {
+                    // Redirect to the vs-computer game page
+                    window.location.href = "vs_computer.html"; // Create a new HTML file for this game mode
+                } else if (selectedMode === "two-player") {
+                    // Redirect to the two-player game page
+                    window.location.href = "two_player.html"; // Create a new HTML file for this game mode
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
